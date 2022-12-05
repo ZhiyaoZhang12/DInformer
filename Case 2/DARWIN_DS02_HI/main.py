@@ -1,12 +1,6 @@
 # -*- coding: utf-8 -*-
 ### DARWIN HI DS02
-'''
-info.
-unit 2 有75cycle，853142个sample,相当于2370h;unit 5 有89cycle，1033420个sample,相当于2871h.
-u10,82,952711,2646;u16,63,765295,2126;u18,71,890719,2474;u20,66,768160,2134;u11,59,663495,1843;u14,76,156778,435,;u15,67,433470,1204;
 
----11.20删掉unit 14,工况差异太大，且数据量很少；
-'''
 import argparse
 import os
 import torch
@@ -64,7 +58,7 @@ for i in range(len(pred_len_iter)):
     parser.add_argument('--is_perception', type=str, default=False, help='whether to to save the perception results')
     parser.add_argument('--normal_style', type=str, default='StandardScaler',help='MinMaxScale or StandardScaler')
     parser.add_argument('--synthetic_data_path', type=str, default='Case/DARWIN/DARWIN_AG/results/Synthetics_DS02_LTTB_sampling_rate6.h5py') 
-    parser.add_argument('--rate_data', type=float, default=1,help='rate of data availability')  ###1 DS02暂不考虑 rate_data 
+    parser.add_argument('--rate_data', type=float, default=1,help='rate of data availability')  ###1 DS02 no rate_data 
     parser.add_argument('--attn', type=str, default='prob', help='attention used in encoder, options:[prob, full]')
     parser.add_argument('--embed', type=str, default='timeF', help='time features encoding, options:[timeF, fixed, learned]')                                                                     
     parser.add_argument('--activation', type=str, default='gelu',help='activation')
@@ -118,13 +112,6 @@ for i in range(len(pred_len_iter)):
         
         print('Settings in this run:',setting)
              
-        
-        ###################################################
-        ###################################################
-        if args.pred_len==512:
-            continue
-        ###################################################
-        ###################################################
     
         exp = Exp(args) # set experiments
         print('\n')

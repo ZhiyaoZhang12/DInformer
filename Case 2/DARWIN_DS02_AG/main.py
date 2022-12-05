@@ -5,16 +5,6 @@ import pandas as pd
 import numpy as np
 from exp.exp_informer import Exp_Informer
 
-### DARWIN AG DS02
-'''2022.11.21
-1.hs 0和1的交界点，往前往后part_data_len//2的长度；
-1.若训练效果由于数据量不足而不佳，则设置引入uncertainty，10204往前往后再加320，stride=160，这样增加了4倍数据；
-2.6个train unit，每unit相当于多个window拼接即可得到完整数据。test的window构建时，stride=seq_len，这样才能实现无缝无重复拼接。
-3.batch_size 24；32；64；128；都试试
-4.enc_in和dec_in 对应d_features,ag还加了一列hi,所以是38；
-5.attn=full；prob都试试；
-'''
-
 parser = argparse.ArgumentParser(description='[Informer] data (time series) augmentation')
 parser.add_argument('--model', type=str, required=False, default='informer',help='model of experiment, options: [informer, informerstack, informerlight(TBD)]')
 parser.add_argument('--HI_labeling_style', type=str, required=False, default='HI_pw_quadratic', help='HI style, options[HI_linear, HI_quadratic,HI_pw-linear,HI_pw_quadratic]')

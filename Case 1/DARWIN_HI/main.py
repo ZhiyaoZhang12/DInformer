@@ -1,11 +1,6 @@
 # -*- coding: utf-8 -*-
 ### DARWIN HI
-'''2022.11.19
-1.注意，设计DARWIN的时候，ag和hi这两个Informer是单独的loss，并不是联合优化的，后续研究可以考虑联合优化(特别是优化ag取的范围)；
-2.最优参数：(48,16,32);fc=5,nh=8; (其实参数完全同Inforer) --- 对应mse：0.0078；mae：0.066；
-3.跟informer相比，darwin删除了对时间的编码，只保留最简单的位置编码；
-4.informer考虑了长时间序列采样数据的不同时间features的采样，是按s,min,h级别，这个思想在处理DS02时可以借鉴；
-'''
+
 import argparse
 import os
 import torch

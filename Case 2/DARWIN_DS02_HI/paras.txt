@@ -1,0 +1,6 @@
+端1 biLSTM    pred_len_iter = [32,64,128,256,512,1024]  iter=10
+端2 informer  pred_len_iter = [32,64,128,256,512,1024]  iter=10
+端3 DARWIN    pred_len_iter = [32,64,128,256,512,1024]  iter=10(2048;512) [没开]
+
+
+

@@ -1,12 +1,5 @@
 ### DARWIN data_augmentation
-''' 2022.11.19
-1.只跑了FD001的数据
-2.输入=输出，M-M;
-3.最终选择的trajectory只有67条，限制是trajectory>=187
-4.输入到模型的time series 长度是148，选取RUL范围是(40,187)
-5.考虑到的是健康状态和退化状态的拐点附近,prognosis效果不佳
-6.seq_len=label_len, pred_len=0
-'''
+
 import argparse
 import os
 import torch

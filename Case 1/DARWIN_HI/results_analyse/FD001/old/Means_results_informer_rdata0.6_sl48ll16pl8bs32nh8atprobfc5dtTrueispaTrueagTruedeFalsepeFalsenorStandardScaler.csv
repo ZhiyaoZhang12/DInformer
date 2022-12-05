@@ -1,0 +1,5 @@
+,window,window,window,window,window,whole,whole,whole,whole,whole
+,mae,mse,rmse,mape,mspe,mae,mse,rmse,mape,mspe
+24,0.08664491,0.013287998,0.11507385,inf,inf,0.07338029,0.009145758,0.09561627,inf,inf
+16,0.088125855,0.01287539,0.1131438,inf,inf,0.07038572,0.008702767,0.093245246,inf,inf
+8,0.08469891,0.012038157,0.10598282,inf,inf,0.07141684,0.008792933,0.09249135,inf,inf

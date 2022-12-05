@@ -1,0 +1,5 @@
+,window,window,window,window,window,whole,whole,whole,whole,whole
+,mae,mse,rmse,mape,mspe,mae,mse,rmse,mape,mspe
+pred_len,,,,,,,,,,
+32,0.17457432,0.057915565,0.24065652,inf,inf,0.14121628,0.03236491,0.1799025,inf,inf
+mean,0.17457432,0.057915565,0.24065652,inf,inf,0.14121628,0.03236491,0.1799025,inf,inf
